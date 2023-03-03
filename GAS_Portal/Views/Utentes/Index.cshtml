@@ -1,0 +1,144 @@
+﻿@model IEnumerable<GAS_Portal.Models.Utente>
+@{
+    ViewData["Title"] = "Utentes";
+}
+
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - GAS</title>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/dataTables.bootstrap5.min.css" />
+        @*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" />*@
+        <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script defer src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+        <script defer src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>
+        <script src="~/js/site.js"></script>
+      
+        
+</head>
+	
+
+<body class="app">   	
+    
+    <div class="app-wrapper">
+	    
+	    <div class="app-content">
+		    <div class="container-xl">		    
+			    <div class="row g-3 mb-4 align-items-center justify-content-between">
+				    <div class="col-auto">
+			            <h1 class="app-page-title mb-0">Utentes</h1>
+				    </div>
+			    </div><!--//row-->
+                <div>
+                    <div>
+                        <div>
+                            @*class="table-responsive"*@
+		                    <table id="example" class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Data</th>
+                                    <th>Nome</th>
+                                    <th>Localidade</th>
+                                    <th>Telemóvel</th>
+                                    <th>NIF</th>
+                                    <th>SNS</th>
+                                    <th>Apoios</th>
+                                    <th>Agregado</th>
+                                    <th>Atendimento Social</th>
+                                    <th>Docs</th>                
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <a asp-action="Details" asp-route-id="@item.ID">@Html.DisplayFor(modelItem => item.ID)</a>
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Data)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Nome)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Localidade)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Telemovel)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NIF)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SNS)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ID)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ID)
+                                    </td>
+                                     <td>
+                                        @Html.DisplayFor(modelItem => item.ID)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ID)
+                                    </td>
+
+
+                                </tr>
+
+                            }
+           
+                            <tfoot>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Data</th>
+                                    <th>Nome</th>
+                                    <th>Localidade</th>
+                                    <th>Telemóvel</th>
+                                    <th>NIF</th>
+                                    <th>SNS</th>
+                                    <th>Apoios</th>
+                                    <th>Agregado</th>
+                                    <th>Atendimento Social</th>
+                                    <th>Docs</th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                        </div><!--//table-responsive-->
+
+                    </div><!--//app-card-body-->
+                </div><!--//app-card-->
+				
+				
+				
+	    </div><!--//app-content-->
+	    
+	    <footer class="app-footer">
+		    <div class="container text-center py-3">
+		         <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+                    <p class="mt-5 mb-3 text-muted">&copy;GAS</p>
+		       
+		    </div>
+	    </footer><!--//app-footer-->
+	    
+    </div><!--//app-wrapper-->    					
+
+ 
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+    <script src="assets/js/app.js"></script> 
+
+</body>
+</html> 
+

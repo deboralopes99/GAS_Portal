@@ -1,0 +1,131 @@
+﻿@model GAS_Portal.Models.Utente
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar</h1>
+
+<body class="app">
+    <div class="app-wrapper">
+        <div class="app-content">
+            <div class="container-xl">
+                <div class="row g-3 mb-4 align-items-center justify-content-between">
+                    <h4>Utentes</h4>
+                    <hr />
+                    <div class="row">
+                        <div class="col-md-4">
+                            <form asp-action="Edit">
+                                <div class="form-group">
+                                    <label asp-for="CodigoUtente" class="control-label"></label>
+                                    <input asp-for="CodigoUtente" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CodigoCDP" class="control-label"></label>
+                                    <input asp-for="CodigoCDP" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CodigoPAR" class="control-label"></label>
+                                    <input asp-for="CodigoPAR" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Entidade_Gestora" class="control-label"></label>
+                                    <input asp-for="Entidade_Gestora" class="form-control" />
+                                </div>
+                                <input type="hidden" asp-for="ID" />
+                                <div class="form-group">
+                                    <label asp-for="Data" class="control-label"></label>
+                                    <input asp-for="Data" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="RGPD" class="control-label"></label>
+                                    <input asp-for="RGPD" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Direito_Esquecimento" class="control-label"></label>
+                                    <input asp-for="Direito_Esquecimento" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="NIF" class="control-label"></label>
+                                    <input asp-for="NIF" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="SNS" class="control-label"></label>
+                                    <input asp-for="SNS" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Nome" class="control-label"></label>
+                                    <input asp-for="Nome" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Morada" class="control-label"></label>
+                                    <input asp-for="Morada" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="NrPorta" class="control-label"></label>
+                                    <input asp-for="NrPorta" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Local" class="control-label"></label>
+                                    <input asp-for="Local" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CodigoPostal" class="control-label"></label>
+                                    <input asp-for="CodigoPostal" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Localidade" class="control-label"></label>
+                                    <input asp-for="Localidade" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Freguesia" class="control-label"></label>
+                                    <input asp-for="Freguesia" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Concelho" class="control-label"></label>
+                                    <input asp-for="Concelho" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Distrito" class="control-label"></label>
+                                    <input asp-for="Distrito" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Pais" class="control-label"></label>
+                                    <input asp-for="Pais" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Telemovel" class="control-label"></label>
+                                    <input asp-for="Telemovel" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="DataNascimento" class="control-label"></label>
+                                    <input asp-for="DataNascimento" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Sexo" class="control-label"></label>
+                                    <input asp-for="Sexo" class="form-control" />
+                                </div>
+                                <br />
+                                <div class="form-group">
+                                    <input type="submit" value="Save" class="btn btn-primary" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </div>
+</body>
+
+@*
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
+*@
