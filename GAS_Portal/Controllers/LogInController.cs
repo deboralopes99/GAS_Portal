@@ -28,14 +28,14 @@ namespace GAS_Portal.Controllers
             var contentToken = new StringContent(string.Empty);
             contentToken.Headers.ContentType = new MediaTypeHeaderValue("application/json");
             requestToken.Content = contentToken;
-            var response = await clientToken.SendAsync(requestToken);
-            response.EnsureSuccessStatusCode();
+            var responseToken = await clientToken.SendAsync(requestToken);
+            responseToken.EnsureSuccessStatusCode();
 
             // Lê o conteúdo da resposta como uma string JSON
-            string jsonStr = response.Content.ReadAsStringAsync().Result;
+            string jsonStr = responseToken.Content.ReadAsStringAsync().Result;
             JObject json = JObject.Parse(jsonStr);
             string token = json["response"]["token"].ToString();
-            GetToken model = new GetToken { Token = token };
+            //GetToken model = new GetToken { Token = token };
 
             //Obtêm data dos utilizadores
             var clientUsers = new HttpClient();
