@@ -18,11 +18,110 @@
 @model GAS_Portal.Models.Utente
 @{
     ViewData["Title"] = "Detalhes";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h1></h1>
 
 <body class="app">
+    <div class="app-wrapper">
+
+        <div class="app-content pt-3 p-md-3 p-lg-4">
+            <div class="container-xl">
+                <div class="row g-3 mb-4 align-items-center justify-content-between">
+                    <div class="col-auto">
+                        <h1 class="app-page-title mb-0">Ficha do Utente</h1>
+                    </div>
+                    <div class="col-auto">
+                        <div class="page-utilities">
+                            <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
+                                <div class="col-auto">
+                                    <a class="btn app-btn-secondary" href="#">
+                                        Apagar
+                                    </a>
+                                </div>
+                                <div class="col-auto">
+                                    <a class="btn app-btn-secondary" href="#">
+                                        Novo
+                                    </a>
+                                </div>
+                                <div class="col-auto">
+                                    <a class="btn app-btn-secondary" asp-controller="Utentes" asp-action="Edit" asp-route-id="@Model?.ID">
+                                        Modificar
+                                    </a>
+                                </div>
+                                <div class="col-auto">
+                                    <a class="btn app-btn-secondary" href="#">
+                                        Pesquisar
+                                    </a>
+                                </div>
+                            </div><!--//row-->
+                        </div><!--//table-utilities-->
+                    </div><!--//col-auto-->
+                </div><!--//row-->
+                <form class="settings-form">
+                    <div class="row g-4 settings-section">
+                        <div class="col-12 col-md-6">
+                            <div class="app-card app-card-settings shadow-sm p-4">
+                                <div class="app-card-body">
+                                    <div class="mb-3">
+                                        <label for="setting-input-1" class="form-label">@Html.DisplayNameFor(model => model.NIF)</label>
+                                        <input type="text" class="form-control" id="setting-input-1" value="@Html.DisplayFor(model => model.NIF)" disabled>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="setting-input-2" class="form-label">@Html.DisplayNameFor(model => model.CodigoPostal)</label>
+                                        <input type="text" class="form-control" id="setting-input-2" value="@Html.DisplayFor(model => model.CodigoPostal)" disabled>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="setting-input-3" class="form-label">@Html.DisplayNameFor(model => model.Localidade)</label>
+                                        <input type="text" class="form-control" id="setting-input-3" value="@Html.DisplayFor(model => model.Localidade)" disabled>
+                                    </div>
+                                </div><!--//app-card-body-->
+                            </div><!--//app-card-->
+                        </div><!--//col-->
+                        <div class="col-12 col-md-6">
+                            <div class="app-card app-card-settings shadow-sm p-4">
+                                <div class="app-card-body">
+                                    <div class="mb-3">
+                                        <label for="setting-input-4" class="form-label">@Html.DisplayNameFor(model => model.Nome)</label>
+                                        <input type="text" class="form-control" id="setting-input-4" value="@Html.DisplayFor(model => model.Nome)" disabled>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="setting-input-5" class="form-label">@Html.DisplayNameFor(model => model.Data)</label>
+                                        <input type="text" class="form-control" id="setting-input-5" value="@Html.DisplayFor(model => model.Data)" disabled>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="setting-input-6" class="form-label">@Html.DisplayNameFor(model => model.Telemovel)</label>
+                                        <input type="text" class="form-control" id="setting-input-6" value="@Html.DisplayFor(model => model.Telemovel)" disabled>
+                                    </div>
+                                </div><!--//app-card-body-->
+                            </div><!--//app-card-->
+                        </div><!--//col-->
+                    </div><!--//row-->
+                    <br />
+                    @*<button id="editBtn" type="button" class="btn app-btn-primary">Editar</button>*@
+                </form>
+            </div><!--//container-fluid-->
+        </div><!--//app-content-->
+
+    <footer class="app-footer">
+        <div class="container text-center py-3">
+            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+                <p class="mt-5 mb-3 text-muted">&copy;GAS</p>
+
+        </div>
+    </footer><!--//app-footer-->
+
+</div><!--//app-wrapper-->
+<!-- Javascript -->
+<script src="~/plugins/popper.min.js"></script>
+<script src="~/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Page Specific JS -->
+<script src="~/js/app.js"></script>
+<script src="~/js/site.js"></script>
+</body>
+
+@*<body>
     <div class="app-wrapper">
         <div class="app-content">
             <div class="container-xl">
@@ -173,4 +272,4 @@
 
     </div>
     
-</body>
+</body>*@

@@ -25,5 +25,8 @@
         public string? Telemovel { get; set; }
         public string? DataNascimento { get; set; }
         public string? Sexo { get; set; }
+        public string? PreLog { get; set; }
+        public string? RecordId { get; set; }
+
     }
 }

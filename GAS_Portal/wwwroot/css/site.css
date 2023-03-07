@@ -16,3 +16,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+form [disabled] {
+    background-color: #ffffff;
+    color: #3e3e3e;
+    border: none;
+}
+
+.disabled-link {
+    pointer-events: none;
+    opacity: 0.5;
+}
+

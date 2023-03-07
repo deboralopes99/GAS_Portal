@@ -5,3 +5,29 @@
 $(document).ready(function () {
     $('#example').DataTable();
 });
+
+//Botão editar 
+const editBtn = document.getElementById('editBtn');
+const inputs = document.querySelectorAll('.settings-form input');
+
+editBtn.addEventListener('click', function () {
+    inputs.forEach(input => {
+        input.removeAttribute('disabled');
+    });
+
+//Voltar Atrás
+$(document).ready(function () {
+    $('.submenu-toggle').click(function () {
+        var submenu = $(this).next('.submenu');
+        submenu.slideToggle();
+        window.history.back();
+        return false;
+    });
+});
+
+
+
+
+
+
+
